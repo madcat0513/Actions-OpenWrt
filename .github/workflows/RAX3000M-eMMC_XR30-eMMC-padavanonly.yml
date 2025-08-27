@@ -16,11 +16,11 @@ on:
     inputs:
       LAN_IP:
         description: 'Set LAN IP Address'
-        required: false
+        required: true
         default: '192.168.1.1'
       WIFI_DRIVER:
         description: 'Choose WiFi Driver'
-        required: false
+        required: true
         default: 'v7.6.7.2-fw-20240823(recommend)'
         type: choice
         options:
@@ -40,17 +40,17 @@ on:
         - v7.6.6.1-fw-20240823
       EEPROM:
         description: 'Use nx30pro eeprom and fixed WiFi MAC address'
-        required: false
+        required: true
         default: true
         type: boolean
       APP_MTK:
         description: 'Use luci-app-mtk wifi config'
-        required: false
+        required: true
         default: false
         type: boolean
       NO_DOCKERMAN:
         description: 'Not build luci-app-dockerman'
-        required: false
+        required: true
         default: false
         type: boolean
       ssh:
