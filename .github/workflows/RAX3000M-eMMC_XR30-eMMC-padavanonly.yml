@@ -16,11 +16,11 @@ on:
     inputs:
       LAN_IP:
         description: 'Set LAN IP Address'
-        required: true
+        required: false
         default: '192.168.1.1'
       WIFI_DRIVER:
         description: 'Choose WiFi Driver'
-        required: true
+        required: false
         default: 'v7.6.7.2-fw-20240823(recommend)'
         type: choice
         options:
@@ -40,17 +40,17 @@ on:
         - v7.6.6.1-fw-20240823
       EEPROM:
         description: 'Use nx30pro eeprom and fixed WiFi MAC address'
-        required: true
+        required: false
         default: true
         type: boolean
       APP_MTK:
         description: 'Use luci-app-mtk wifi config'
-        required: true
+        required: false
         default: false
         type: boolean
       NO_DOCKERMAN:
         description: 'Not build luci-app-dockerman'
-        required: true
+        required: false
         default: false
         type: boolean
       ssh:
@@ -66,7 +66,7 @@ env:
   OPENWRT_NAME: padavanonly
   UPLOAD_TAG_NAME: rax3000m-emmc_xr30-emmc
   REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-6.6.git
-  REPO_BRANCH: openwrt-24.10-6.6
+  REPO_BRANCH: 2410
   FEEDS_CONF: feeds.conf.default
   RAX3000M_EMMC_DTS_FILE: target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-cmcc-rax3000m-emmc.dts
   CONFIG_FILE: RAX3000M-eMMC_XR30-eMMC-hanwckf/.mtwifi-cfg.config
