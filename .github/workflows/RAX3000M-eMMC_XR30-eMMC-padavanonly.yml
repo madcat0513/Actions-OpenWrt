@@ -11,7 +11,7 @@
 name: RAX3000M-eMMC_XR30-eMMC-padavanonly
 
 on:
-  repository_dispatch:
+  #repository_dispatch:
   workflow_dispatch:
     inputs:
       LAN_IP:
