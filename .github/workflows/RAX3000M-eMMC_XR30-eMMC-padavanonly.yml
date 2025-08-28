@@ -68,7 +68,7 @@ env:
   REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-6.6.git
   REPO_BRANCH: 2410
   FEEDS_CONF: feeds.conf.default
-  RAX3000M_EMMC_DTS_FILE: RAX3000M-eMMC_XR30-eMMC-hanwckf/mt7981-cmcc-xr30-emmc.dtsi
+  RAX3000M_EMMC_DTS_FILE: target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-cmcc-rax3000m-emmc.dts
   CONFIG_FILE: RAX3000M-eMMC_XR30-eMMC-hanwckf/xr30-emmc.config
   DIY_P1_SH: RAX3000M-eMMC_XR30-eMMC-hanwckf/diy-part1.sh
   DIY_P2_SH: RAX3000M-eMMC_XR30-eMMC-hanwckf/diy-part2.sh
@@ -142,6 +142,7 @@ jobs:
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
+        cp RAX3000M-eMMC_XR30-eMMC-hanwckf/mt7981-cmcc-xr30-emmc.dtsi openwrt/target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-cmcc-rax3000m.dtsi
 
     - name: 设置RAX3000M-eMMC的eMMC使用highspeed
       run: |
