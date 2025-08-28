@@ -35,6 +35,13 @@ echo '
 CONFIG_PACKAGE_kmod-xdp-sockets-diag=y
 ' >> .config
 
+# add nikki
+echo '
+CONFIG_PACKAGE_nikki=y
+CONFIG_PACKAGE_luci-app-nikki=y
+CONFIG_PACKAGE_luci-i18n-nikki-zh-cn=y
+' >> .config
+
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 ##-----------------Del duplicate packages------------------
